@@ -1,0 +1,103 @@
+ <!-- Page content -->
+    <div class="container mt-4 pb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-10">
+          <div class="card bg-secondary shadow border-0">
+            <div class="card-body px-lg-5 py-lg-5">
+              <div class="text-center text-muted mb-4">
+                <small>Create a new User</small>
+              </div>
+              <form id="accountCreate" action="api/accounts/create" method="POST"   >
+               <div id="formError" style="display:none"><p id="errorField" class="text-center text-danger"></p> </div>
+                 <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-satisfied"></i></span>
+                    </div>
+                    <input name="firstName" class="form-control" placeholder="First Name" type="text">
+                  </div>
+                </div>
+                 <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-satisfied"></i></span>
+                    </div>
+                    <input name="lastName" class="form-control" placeholder="Last Name" type="text">
+                  </div>
+                </div>
+                 <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-satisfied"></i></span>
+                    </div>
+                    <input name="address" class="form-control" placeholder="Address" type="text">
+                  </div>
+                </div>
+                 <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-satisfied"></i></span>
+                    </div>
+                    <input name="city" class="form-control" placeholder="City" type="text">
+                  </div>
+                </div>
+                 <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-satisfied"></i></span>
+                    </div>
+                    <input name="zip" class="form-control" placeholder="Zip" type="tel">
+                  </div>
+                </div>
+                 <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-satisfied"></i></span>
+                    </div>
+                    <input name="vatNumber" class="form-control" placeholder="VAT Number" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    <input name="email" class="form-control" placeholder="Email" type="email">
+                  </div>
+                </div>
+
+                <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    <input name="phone" class="form-control" placeholder="Phone" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="access" class="text-muted" >Access: </label>
+                  <select name="access" multiple  class="form-control form-control-alternative" id="access">
+                    <option value="create">create</option>
+                    <option value="delete">delete</option>
+                    <option value="read">read</option>
+                    <option value="update">update</option>
+                   </select>
+                </div>
+                	<p id="loader" class="text-center text-success" style="display:none"> Loading...</p>
+                  <input id="submit" type="submit" class="btn btn-success my-4 mx-auto" value="Create" style="display:block" />
+                </div>
+
+              </form>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-6">
+              
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>

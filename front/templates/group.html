@@ -1,0 +1,83 @@
+  <div class="container-fluid mt-4">
+      <div class="row">
+        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+          <div class="card card-profile shadow">
+            <div class="row justify-content-center">
+              </div>
+            <div class="card-header text-center border-0  pb-2">
+              <div class="d-flex justify-content-between">
+                <button class="btn deleteGroup btn-sm btn-round btn-danger float-left" id="{_id}"  ><i class="in in-fat-delete"></i> delete</i></button>
+                <button type="button" class="btn btn-success btn-sm  btn-icon float-right" data-toggle="modal" data-target="#exampleModal">
+                       <i class="ni ni-fat-add">edit</i>
+                     </button>
+           </div>
+               
+              
+            </div>
+            <div class="card-body pt-0">
+            <div class="row">
+               <div class="col">
+                 <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                   <div>
+                     <span class="heading text-success">{users}</span>
+                     <span class="description">Users</span>
+                   </div>
+                 </div>
+               </div>
+             </div>
+				<div class="row justify-content-center" >
+					Privilages: {privilages}
+				</div>
+              <div class="text-center">
+                <h3>
+                  {name}<span class="font-weight-light"> <br/> <small>by: {createdBy}</small> </span>
+                </h3>
+                <hr class="my-4" />
+               </div>
+            </div>
+          </div>
+        </div>
+       </div>
+
+
+
+
+ <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">Edit group: </h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+        
+       </div>
+       <form id="groupUpdate" method="PUT" action="api/groups/update?id={_id}">
+        <div id="formError" style="display:none" ><p id="errorField" class="text-center text-danger"></p></div>
+             
+       <div class="modal-body bg-secondary">
+        <div class="form-group">
+        	<label for="name" >user's email:</label>
+			 <input type="email" name="user" placeholder="email..." class="form-control form-control-alternative" />
+		</div>
+		 <div class="form-group">
+	       	<label for="name" >privilage:</label>
+			 <input type="text" name="privilage" placeholder="privilage..." class="form-control form-control-alternative" />
+		</div>
+
+         <div class="form-group">
+              <div class="custom-control custom-radio mb-3">
+                <input name="remove" class="custom-control-input bg-success text-success" id="customRadio5" type="checkbox">
+                <label name="add" class="custom-control-label" for="customRadio5">Remove</label>
+              </div>
+            
+         </div>
+       <div id="submit" style="display:block" class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <input type="submit" class="btn btn-success" value="Save"/>
+       </div>
+       <div  id="loader" style="display:none" class="modal-footer"> Loading...</div>
+       </form>
+     </div>
+   </div>
+ </div>
